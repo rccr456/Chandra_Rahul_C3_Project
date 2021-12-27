@@ -34,7 +34,7 @@ class RestaurantServiceTest {
     @Test
     public void searching_for_existing_restaurant_should_return_expected_restaurant_object() throws restaurantNotFoundException {
          // 1.Arrange
-         // Automatic call to load_restaurant_for_testing();
+         //Automatic call to load_restaurant_for_testing();
 
         //2. Act
         Restaurant searchedRestaurant = service.findRestaurantByName("Amelie's cafe");
