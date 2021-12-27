@@ -50,6 +50,15 @@ public class Restaurant {
 
         menu.remove(itemToBeRemoved);
     }
+
+    public int getOrderValue(List<String> addedMenuItems )
+    {
+        int totalValue = 0;
+        return totalValue;
+    }
+
+
+
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
@@ -62,5 +71,6 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
 
 }
