@@ -101,9 +101,14 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 ()->restaurant.removeFromMenu("French fries"));
     }
+    //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>GetOrderCost<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     @Test
-    public void getOrderValue_should_return_order_Total_Cost_for_a_list_of_menu_item_names()
+    public void getOrderCost_should_return_order_Total_Cost_for_a_list_of_menu_item_names()
     {
         //1.Arrange
         // Automatic call to create_restaurant_for_testing();
@@ -111,10 +116,10 @@ class RestaurantTest {
 
 
         //2.Act
-        int totalCost = restaurant.getOrderValue(selectedItemNames) ;
+        int totalCost = restaurant.getOrderCost(selectedItemNames) ;
 
         //3.Assert
         assertEquals(388, totalCost);
     }
-    //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //<<<<<<<<<<<<<<<<<<<<<<<GetOrderCost>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

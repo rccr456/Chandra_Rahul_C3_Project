@@ -51,13 +51,17 @@ public class Restaurant {
         menu.remove(itemToBeRemoved);
     }
 
-    public int getOrderValue(List<String> addedMenuItems )
+    public int getOrderCost(List<String> addedMenuItems )
     {
         int totalValue = 0;
+        for(String addedMenuItem : addedMenuItems)
+        {
+            Item matchedItem = findItemByName(addedMenuItem);
+            if(matchedItem != null)
+                totalValue += matchedItem.getPrice();
+        }
         return totalValue;
     }
-
-
 
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
@@ -65,7 +69,6 @@ public class Restaurant {
                 +"Opening time:"+ openingTime +"\n"
                 +"Closing time:"+ closingTime +"\n"
                 +"Menu:"+"\n"+getMenu());
-
     }
 
     public String getName() {
